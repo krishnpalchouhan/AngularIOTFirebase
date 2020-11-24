@@ -26,9 +26,17 @@ export class DbService {
   }
 
   update(key: string, value: any): Promise<void> {
+  // let data = {};
+  // data[key] = value;
+  //   return this.db.object('/' + key + '/')
+  //     .update(data);
     return this.dbDataRef.update(key, value);
   }
-
+  updateBy(key: string, value: any) {
+    let data = {};
+    data[key] = value;
+    return this.db.object('/' + key + '/')
+  }
   delete(key: string): Promise<void> {
     return this.dbDataRef.remove(key);
   }

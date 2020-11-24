@@ -1,0 +1,28 @@
+<div class="card-container">
+  <a class="card" target="_blank" rel="noopener" >
+    <span class="material-icons"> wb_cloudy</span>
+    <span class="p-1"> Humidity </span>
+    <span>{{Humidity}}</span>
+  </a>
+
+    <a class="card" target="_blank" rel="noopener" >
+      <span class="material-icons">toys</span>
+      <span class="p-1">  Temperature </span>
+      <span>{{Temperature}}</span>
+    </a>
+</div>
+<div class="card-container">
+  <ng-container
+    *ngFor="let item of data; let i = index" >
+    <a class="card" target="_blank" rel="noopener"  *ngIf="isSwitch(item.key)"
+       [class.active]="i == currentIndex"
+       (click)="setActiveTutorial(item, i)" >
+      <span class="material-icons"  >emoji_objects</span>
+      <span class="p-1"> {{ item.key }} </span>
+      <mat-slide-toggle [checked]="isChecked(item.key, item.value)" (change)="changeValue(item.key, item.value)">
+<!--        is {{ item.value }}-->
+      </mat-slide-toggle>
+    </a>
+  </ng-container>
+
+</div>

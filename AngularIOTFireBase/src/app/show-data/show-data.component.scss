@@ -1,4 +1,3 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -287,4 +286,11 @@ svg#clouds {
     display: none;
     visibility: hidden;
   }
+}
+ /********* custom *******/
+.p-1{
+  padding: 0px 5px;
+}
+.mb-1{
+  margin-bottom: 5px;
 }

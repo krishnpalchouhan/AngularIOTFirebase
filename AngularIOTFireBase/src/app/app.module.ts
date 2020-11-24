@@ -10,10 +10,12 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MaterialModule} from './material-module';
+import { ShowDataComponent } from './show-data/show-data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowDataComponent
   ],
   imports: [
     BrowserModule,
